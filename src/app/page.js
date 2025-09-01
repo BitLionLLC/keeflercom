@@ -8,16 +8,16 @@ import keefler from "../assets/home/keefler.jpeg";
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#2a0a2e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#2a0a2e]/80">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+    <header className="sticky top-0 z-50 w-full h-[132px] bg-[#2a0a2e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#220725]/80">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
         <div className="text-center w-full">
-          <div className="text-2xl tracking-[0.6em] text-white">KEEFLER</div>
+          <div className="tracking-[0.2em] text-white font-bodoni-moda italic text-[45px]">KEEFLER</div>
           <nav className="mt-2 hidden gap-8 text-sm text-white/80 md:flex justify-center">
-            <a href="#home" className="hover:text-white">Home</a>
-            <a href="#about" className="hover:text-white">About Me</a>
-            <a href="#music" className="hover:text-white">Music</a>
-            <a href="#live" className="hover:text-white">Live Streaming</a>
-            <a href="#join" className="hover:text-white">Join</a>
+            <a href="#home" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Home</a>
+            <a href="#about" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">About Me</a>
+            <a href="#music" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Music</a>
+            <a href="#live" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Live Streaming</a>
+            <a href="#join" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Join</a>
           </nav>
         </div>
       </div>
@@ -27,7 +27,7 @@ function Header() {
 
 function HeroSection() {
   return (
-    <section id="home" className="relative h-[80vh] w-full">
+    <section id="home" className="relative h-[757px] w-full border-b-white border-b-1">
       <Image src={banner} alt="Keefler banner" fill priority className="object-cover" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-16">
