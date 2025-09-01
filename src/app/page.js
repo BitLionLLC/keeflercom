@@ -27,13 +27,13 @@ function Header() {
 
 function HeroSection() {
   return (
-    <section id="home" className="relative h-[757px] w-full border-b-white border-b-1">
+    <section id="home" className="relative h-[757px] w-full border-b-white border-b-[0.5px]">
       <Image src={banner} alt="Keefler banner" fill priority className="w-full object-cover brightness-140" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-16">
-        <div className="text-center">
-          <div className="mb-4 inline-block rounded-full border border-white/70 px-4 py-2 text-xs tracking-widest text-white/90">PRE-SAVE</div>
-          <h1 className="px-6 text-4xl font-light italic font-bodoni-moda tracking-wide text-white md:text-[80px]">
+        <div className="">
+          <div className="mb-4 inline-block rounded-full border-white border-5 px-4 py-1 text-md tracking-widest text-white">PRE-SAVE</div>
+          <h1 className="text-center px-6 text-4xl font-light italic font-bodoni-moda tracking-wide text-white md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
             NEW MUSIC SOON
           </h1>
         </div>
@@ -49,14 +49,17 @@ function PrimeSection() {
         <Image src={prime} alt="Prime single" fill className="w-full object-cover brightness-140" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
-      <div className="absolute inset-0 flex items-start justify-center pt-10">
-        <div className="text-center">
-          <p className="mb-4 text-white/80 italic tracking-widest">Out Everywhere</p>
-          <h2 className="text-3xl font-light italic text-white md:text-5xl">NEW SINGLE "PRIME"</h2>
-          <div className="mt-6">
-            <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">STREAM NOW</a>
+      <div className="absolute inset-0 flex flex-col items-end justify-end pt-10 mb-14">
+        <div className="flex flex-col w-full items-center">
+          <div className="flex justify-between w-4/7">
+            <p className="mb-4 text-white/80 italic tracking-widest font-bodoni-moda text-3xl -ml-[50px]">Out Everywhere</p>
+            <div className="">
+              <a href="#" className="rounded-full text-white px-8 border-5 py-3 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold">STREAM NOW</a>
+            </div>
           </div>
+          <h2 className="text-[80px] font-light italic text-white font-bodoni-moda">NEW SINGLE "PRIME"</h2>
         </div>
+        
       </div>
     </section>
   );
