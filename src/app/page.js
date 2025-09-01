@@ -1,103 +1,157 @@
 import Image from "next/image";
+import banner from "../assets/home/banner.jpeg";
+import prime from "../assets/home/prime.jpeg";
+import musicvideo from "../assets/home/musicvideo.jpeg";
+import livestreaming from "../assets/home/livestreaming.jpeg";
+import join from "../assets/home/join.jpeg";
+import keefler from "../assets/home/keefler.jpeg";
+
+function Header() {
+  return (
+    <header className="sticky top-0 z-50 w-full bg-[#2a0a2e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#2a0a2e]/80">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <div className="text-center w-full">
+          <div className="text-2xl tracking-[0.6em] text-white">KEEFLER</div>
+          <nav className="mt-2 hidden gap-8 text-sm text-white/80 md:flex justify-center">
+            <a href="#home" className="hover:text-white">Home</a>
+            <a href="#about" className="hover:text-white">About Me</a>
+            <a href="#music" className="hover:text-white">Music</a>
+            <a href="#live" className="hover:text-white">Live Streaming</a>
+            <a href="#join" className="hover:text-white">Join</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function HeroSection() {
+  return (
+    <section id="home" className="relative h-[80vh] w-full">
+      <Image src={banner} alt="Keefler banner" fill priority className="object-cover" />
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="relative z-10 flex h-full w-full items-end justify-center pb-16">
+        <div className="text-center">
+          <div className="mb-4 inline-block rounded-full border border-white/70 px-4 py-2 text-xs tracking-widest text-white/90">PRE-SAVE</div>
+          <h1 className="px-6 text-4xl font-light italic tracking-wide text-white md:text-6xl">
+            NEW MUSIC SOON
+          </h1>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PrimeSection() {
+  return (
+    <section id="music" className="relative">
+      <div className="relative h-[70vh] w-full">
+        <Image src={prime} alt="Prime single" fill className="object-cover" />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
+      <div className="absolute inset-0 flex items-start justify-center pt-10">
+        <div className="text-center">
+          <p className="mb-4 text-white/80 italic tracking-widest">Out Everywhere</p>
+          <h2 className="text-3xl font-light italic text-white md:text-5xl">NEW SINGLE "PRIME"</h2>
+          <div className="mt-6">
+            <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">STREAM NOW</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BadForMeSection() {
+  return (
+    <section className="relative bg-[#2a0a2e]">
+      <div className="relative h-[70vh] w-full">
+        <Image src={keefler} alt="Bad For Me background" fill className="object-cover" />
+        <div className="absolute inset-0 bg-pink-700/40 mix-blend-multiply" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6">
+          <div className="max-w-xl">
+            <h2 className="text-3xl font-light italic text-white md:text-5xl">"BAD FOR ME"</h2>
+            <div className="mt-6 flex gap-4">
+              <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">STREAM NOW</a>
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-white/70 shadow-xl">
+              <Image src={musicvideo} alt="Music video" fill className="object-cover" />
+            </div>
+            <div className="mt-4 text-center">
+              <a href="#" className="rounded-full border border-white/80 px-4 py-2 text-xs tracking-widest text-white/90">MUSIC VIDEO</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LiveStreamingSection() {
+  return (
+    <section id="live" className="relative">
+      <div className="relative h-[60vh] w-full">
+        <Image src={livestreaming} alt="Live streaming" fill className="object-cover" />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
+      <div className="absolute inset-0 flex items-end justify-center pb-10">
+        <div className="text-center">
+          <h2 className="text-4xl font-light italic text-white md:text-6xl">LIVE STREAMING</h2>
+          <div className="mt-6">
+            <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">COME CHILL</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function JoinSection() {
+  return (
+    <section id="join" className="relative">
+      <div className="relative h-[90vh] w-full">
+        <Image src={join} alt="Join the community" fill className="object-cover object-[50%_20%]" />
+        <div className="absolute inset-0 bg-pink-400/60" />
+      </div>
+      <div className="absolute inset-0 flex items-center">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
+          <div className="max-w-xl">
+            <h2 className="text-5xl font-light italic leading-tight text-white md:text-7xl">JOIN THE COMMUNITY</h2>
+            <div className="mt-6">
+              <a href="#" className="rounded-full border border-white/80 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">LEARN MORE</a>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-2xl font-light italic text-white/90">SIGN UP FOR THE NEWSLETTER</h3>
+              <form className="mt-4 max-w-md">
+                <label htmlFor="email" className="sr-only">Email</label>
+                <input id="email" type="email" placeholder="Enter your email here *" className="w-full rounded-none border border-white/60 bg-white/90 px-4 py-3 text-sm text-black placeholder-black/60 outline-none" />
+                <div className="mt-3 flex items-center gap-3 text-white/90">
+                  <input id="subscribe" type="checkbox" className="h-4 w-4" />
+                  <label htmlFor="subscribe" className="text-sm">Yes, subscribe me to your newsletter.</label>
+                </div>
+                <button type="button" className="mt-4 rounded bg-black px-6 py-2 text-sm font-semibold text-white">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className="min-h-screen bg-black text-white">
+      <Header />
+      <HeroSection />
+      <PrimeSection />
+      <BadForMeSection />
+      <LiveStreamingSection />
+      <JoinSection />
+    </main>
   );
 }
