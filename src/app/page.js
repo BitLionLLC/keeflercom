@@ -8,11 +8,11 @@ import keefler from "../assets/home/keefler.jpeg";
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full h-[132px] bg-[#2a0a2e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#220725]/80">
+    <header className="relative top-0 z-50 w-full h-[132px] bg-[#2a0a2e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#220725]/80">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
         <div className="text-center w-full">
           <div className="tracking-[0.2em] text-white font-bodoni-moda italic text-[45px]">KEEFLER</div>
-          <nav className="mt-2 hidden gap-8 text-sm text-white/80 md:flex justify-center">
+          <nav className="mt-2 hidden gap-[88px] text-md text-white/80 md:flex justify-center">
             <a href="#home" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Home</a>
             <a href="#about" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">About Me</a>
             <a href="#music" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Music</a>
@@ -28,12 +28,12 @@ function Header() {
 function HeroSection() {
   return (
     <section id="home" className="relative h-[757px] w-full border-b-white border-b-1">
-      <Image src={banner} alt="Keefler banner" fill priority className="object-cover" />
+      <Image src={banner} alt="Keefler banner" fill priority className="w-full object-cover brightness-140" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-16">
         <div className="text-center">
           <div className="mb-4 inline-block rounded-full border border-white/70 px-4 py-2 text-xs tracking-widest text-white/90">PRE-SAVE</div>
-          <h1 className="px-6 text-4xl font-light italic tracking-wide text-white md:text-6xl">
+          <h1 className="px-6 text-4xl font-light italic font-bodoni-moda tracking-wide text-white md:text-[80px]">
             NEW MUSIC SOON
           </h1>
         </div>
@@ -45,8 +45,8 @@ function HeroSection() {
 function PrimeSection() {
   return (
     <section id="music" className="relative">
-      <div className="relative h-[70vh] w-full">
-        <Image src={prime} alt="Prime single" fill className="object-cover" />
+      <div className="relative h-[661px] w-full">
+        <Image src={prime} alt="Prime single" fill className="w-full object-cover brightness-140" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="absolute inset-0 flex items-start justify-center pt-10">
@@ -65,8 +65,8 @@ function PrimeSection() {
 function BadForMeSection() {
   return (
     <section className="relative bg-[#2a0a2e]">
-      <div className="relative h-[70vh] w-full">
-        <Image src={keefler} alt="Bad For Me background" fill className="object-cover" />
+      <div className="relative h-[781px] w-full">
+        <Image src={keefler} alt="Bad For Me background" fill className="w-full object-cover brightness-140" />
         <div className="absolute inset-0 bg-pink-700/40 mix-blend-multiply" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
@@ -79,7 +79,7 @@ function BadForMeSection() {
           </div>
           <div className="hidden md:block">
             <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-white/70 shadow-xl">
-              <Image src={musicvideo} alt="Music video" fill className="object-cover" />
+              <Image src={musicvideo} alt="Music video" fill className="w-full object-cover brightness-140" />
             </div>
             <div className="mt-4 text-center">
               <a href="#" className="rounded-full border border-white/80 px-4 py-2 text-xs tracking-widest text-white/90">MUSIC VIDEO</a>
@@ -94,8 +94,8 @@ function BadForMeSection() {
 function LiveStreamingSection() {
   return (
     <section id="live" className="relative">
-      <div className="relative h-[60vh] w-full">
-        <Image src={livestreaming} alt="Live streaming" fill className="object-cover" />
+      <div className="relative h-[758px] w-full">
+        <Image src={livestreaming} alt="Live streaming" fill className="w-full object-cover brightness-140" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="absolute inset-0 flex items-end justify-center pb-10">
@@ -113,9 +113,9 @@ function LiveStreamingSection() {
 function JoinSection() {
   return (
     <section id="join" className="relative">
-      <div className="relative h-[90vh] w-full">
-        <Image src={join} alt="Join the community" fill className="object-cover object-[50%_20%]" />
-        <div className="absolute inset-0 bg-pink-400/60" />
+      <div className="relative h-[1002px] w-full">
+        <Image src={join} alt="Join the community" fill className="w-full object-cover object-[50%_20%]" />
+        <div className="absolute inset-0" />
       </div>
       <div className="absolute inset-0 flex items-center">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
