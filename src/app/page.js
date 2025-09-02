@@ -1,10 +1,12 @@
 import Image from "next/image";
-import banner from "../assets/home/banner.jpeg";
-import prime from "../assets/home/prime.jpeg";
-import musicvideo from "../assets/home/musicvideo.jpeg";
-import livestreaming from "../assets/home/livestreaming.jpeg";
-import join from "../assets/home/join.jpeg";
-import keefler from "../assets/home/keefler.jpeg";
+import banner from "../assets/home/banner.png";
+import prime from "../assets/home/prime.png";
+import musicvideo from "../assets/home/musicvideo.png";
+import livestreaming from "../assets/home/livestreaming.png";
+import join from "../assets/home/join.png";
+import keefler from "../assets/home/keefler.png";
+import grid from "../assets/home/grid.png";
+import primeAlbum from "../assets/home/prime_album.png";
 
 function Header() {
   return (
@@ -73,19 +75,17 @@ function BadForMeSection() {
         <div className="absolute inset-0 mix-blend-multiply" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6">
-          <div className="">
+        <div className="mx-auto flex flex-col w-full max-w-6xl items-end justify-between px-6 absolute top-[50px]">
+          <div className="flex flex-col items-end">
             <h2 className="text-3xl font-light italic font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">"BAD FOR ME"</h2>
-            <div className="mt-6 flex gap-4">
-              <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">STREAM NOW</a>
+            <div className="mt-2 flex gap-4">
+              <a href="#" className="rounded-full text-white px-8 border-5 py-3 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold">STREAM NOW</a>
             </div>
           </div>
-          <div className="hidden md:block">
-            <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-white/70 shadow-xl">
+          <div className="hidden md:block absolute left-0 top-[40px]">
+            <div className="relative h-[400px] w-[400px] overflow-hidden rounded-full border-6 border-white shadow-xl">
               <Image src={musicvideo} alt="Music video" fill className="w-full object-cover object-center brightness-140" />
-            </div>
-            <div className="mt-4 text-center">
-              <a href="#" className="rounded-full border border-white/80 px-4 py-2 text-xs tracking-widest text-white/90">MUSIC VIDEO</a>
+              <a href="#" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
             </div>
           </div>
         </div>
@@ -101,11 +101,11 @@ function LiveStreamingSection() {
         <Image src={livestreaming} alt="Live streaming" fill className="w-full h-full object-cover object-center brightness-140" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
-      <div className="absolute inset-0 flex items-end justify-center pb-10">
+      <div className="absolute inset-0 flex items-start justify-end pb-10">
         <div className="text-center">
-          <h2 className="text-4xl font-light italic text-white md:text-6xl">LIVE STREAMING</h2>
-          <div className="mt-6">
-            <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">COME CHILL</a>
+          <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">LIVE STREAMING</h2>
+          <div className="-mt-2 flex justify-end">
+            <a href="#" className="text-center rounded-full text-white px-1 border-4 py-1 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10">COME CHILL</a>
           </div>
         </div>
       </div>
@@ -120,18 +120,18 @@ function JoinSection() {
         <Image src={join} alt="Join the community" fill className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0" />
       </div>
-      <div className="absolute inset-0 flex items-center">
+      <div className="absolute inset-0 flex items-start pt-2">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
           <div className="max-w-xl">
-            <h2 className="text-5xl font-light italic leading-tight text-white md:text-7xl">JOIN THE COMMUNITY</h2>
+            <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide text-white text-[80px] leading-[01]">JOIN THE COMMUNITY</h2>
             <div className="mt-6">
-              <a href="#" className="rounded-full border border-white/80 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">LEARN MORE</a>
+              <a href="#" className="text-center rounded-full text-white px-14 border-4 py-2 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10">LEARN MORE</a>
             </div>
             <div className="mt-10">
-              <h3 className="text-2xl font-light italic text-white/90">SIGN UP FOR THE NEWSLETTER</h3>
+              <h3 className="font-light italic text-white font-bodoni-moda tracking-wide text-white text-[45px]">SIGN UP FOR THE NEWSLETTER</h3>
               <form className="mt-4 max-w-md">
                 <label htmlFor="email" className="sr-only">Email</label>
-                <input id="email" type="email" placeholder="Enter your email here *" className="w-full rounded-none border border-white/60 bg-white/90 px-4 py-3 text-sm text-black placeholder-black/60 outline-none" />
+                <input id="email" type="email" placeholder="Enter your email here *" className="w-full rounded-none border-b border-white px-4 py-3 text-sm text-black placeholder-black/60 outline-none" />
                 <div className="mt-3 flex items-center gap-3 text-white/90">
                   <input id="subscribe" type="checkbox" className="h-4 w-4" />
                   <label htmlFor="subscribe" className="text-sm">Yes, subscribe me to your newsletter.</label>
