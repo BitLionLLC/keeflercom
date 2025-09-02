@@ -11,7 +11,7 @@ import grid from "../assets/home/grid.png";
 import primeAlbum from "../assets/home/prime_album.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitch, faTiktok, faInstagram, faYoutube, faTwitter, faSpotify, faItunesNote } from "@fortawesome/free-brands-svg-icons";
-import { Checkbox, Input } from "@heroui/react";
+import { useState } from "react";
 
 function Header() {
   return (
@@ -39,7 +39,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-16">
         <div className="">
-          <div className="mb-4 inline-block rounded-full border-white border-5 px-4 py-1 text-md tracking-widest text-white">PRE-SAVE</div>
+          <div className="w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-md bg-[#220725] shadow tracking-[0.2em] font-bold">PRE-SAVE</div>
           <h1 className="text-center px-6 text-4xl font-light italic font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
             NEW MUSIC SOON
           </h1>
@@ -61,7 +61,7 @@ function PrimeSection() {
           <div className="flex justify-between w-4/7">
             <p className="mb-4 text-white/80 italic tracking-widest font-bodoni-moda text-3xl -ml-[50px]">Out Everywhere</p>
             <div className="">
-              <a href="#" className="rounded-full text-white px-8 border-5 py-3 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold">STREAM NOW</a>
+              <a href="#" className="rounded-full text-white px-8 border-5 py-3 text-md bg-[#220725] shadow  tracking-[0.2em] font-bold">STREAM NOW</a>
             </div>
           </div>
           <h2 className="text-[80px] font-light italic text-white font-bodoni-moda">NEW SINGLE "PRIME"</h2>
@@ -84,13 +84,13 @@ function BadForMeSection() {
           <div className="flex flex-col items-end">
             <h2 className="text-3xl font-light italic font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">"BAD FOR ME"</h2>
             <div className="mt-2 flex gap-4">
-              <a href="#" className="rounded-full text-white px-8 border-5 py-3 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold">STREAM NOW</a>
+              <a href="#" className="rounded-full text-white px-8 border-5 py-3 text-md bg-[#220725] shadow tracking-[0.2em] font-bold">STREAM NOW</a>
             </div>
           </div>
           <div className="hidden md:block absolute left-0 top-[40px]">
             <div className="relative h-[400px] w-[400px] overflow-hidden rounded-full border-6 border-white shadow-xl">
               <Image src={musicvideo} alt="Music video" fill className="w-full object-cover object-center brightness-140" />
-              <a href="#" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
+              <a href="#" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
             </div>
           </div>
         </div>
@@ -108,9 +108,9 @@ function LiveStreamingSection() {
       </div>
       <div className="absolute inset-0 flex items-start justify-end pb-10">
         <div className="text-center">
-          <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">LIVE STREAMING</h2>
+          <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">LIVE STREAMING</h2>
           <div className="-mt-2 flex justify-end">
-            <a href="#" className="text-center rounded-full text-white px-1 border-4 py-1 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10">COME CHILL</a>
+            <a href="#" className="text-center rounded-full text-white px-1 border-4 py-1 text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">COME CHILL</a>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ function LiveStreamingSection() {
   );
 }
 
-function JoinSection() {
+function JoinSection({ email, setEmail }) {
   return (
     <section id="join" className="relative">
       <div className="relative h-[1002px] w-full">
@@ -130,21 +130,17 @@ function JoinSection() {
           <div className="max-w-xl">
             <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide leading-[01]">JOIN THE COMMUNITY</h2>
             <div className="mt-6">
-              <a href="#" className="text-center rounded-full text-white px-14 border-4 py-2 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10">LEARN MORE</a>
+              <a href="#" className="text-center rounded-full text-white px-14 border-4 py-2 text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">LEARN MORE</a>
             </div>
             <div className="mt-10">
               <h3 className="font-light italic text-white font-bodoni-moda tracking-wide text-[45px]">SIGN UP FOR THE NEWSLETTER</h3>
               <form className="mt-4 max-w-md">
                 <label htmlFor="email" className="sr-only">Email</label>
                 <p className="text-white/60">Enter your email here *</p>
-                <Input id="email" type="email" className="border-b-1 border-b-white" variant="flat" classNames={{
-                  inputWrapper: "after:border-white focus-within:after:border-white",
-                  input: "text-white placeholder:text-white/60",
-                  label: "text-white/80",
-                }} />
+                <input className="w-full focus:bg-white/30 h-[40px] focus:border-0 focus:ring-0 outline-0 p-2" value={email} onChange={e => setEmail(e.target.value)} />
                 <div className="flex justify-between">
                   <div className="mt-3 flex items-center gap-3">
-                    <Checkbox isRequired className="w-[20px]" />
+                    <input type="checkbox" className="!bg-transparent" required />
                     <label htmlFor="subscribe" className="text-md">Yes, subscribe me to your<br/> newsletter. *</label>
                   </div>
                   <button type="button" className="mt-4 rounded bg-black px-6 py-2 text-sm font-semibold text-white">Submit</button>
@@ -155,22 +151,22 @@ function JoinSection() {
                     <FontAwesomeIcon icon={faTwitch} className="text-black text-[62px] w-[62px] h-[62px]" aria-label="Twitch" />
                   </a>
                   <a href="https://www.tiktok.com/@keeflermusic">
-                    <FontAwesomeIcon icon={faTiktok} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="TikTok" />
+                    <FontAwesomeIcon icon={faTiktok} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="TikTok" />
                   </a>
                   <a href="https://www.instagram.com/keefler_elf/">
-                    <FontAwesomeIcon icon={faInstagram} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Instagram" />
+                    <FontAwesomeIcon icon={faInstagram} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Instagram" />
                   </a>
                   <a href="https://youtube.com/@keeflermusic">
-                    <FontAwesomeIcon icon={faYoutube} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="YouTube" />
+                    <FontAwesomeIcon icon={faYoutube} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="YouTube" />
                   </a>
                   <a href="https://x.com/Keefler_Elf">
-                    <FontAwesomeIcon icon={faTwitter} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Twitter" />
+                    <FontAwesomeIcon icon={faTwitter} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Twitter" />
                   </a>
                   <a href="https://open.spotify.com/artist/3t3zKVdiWERcdDHg6ei89c">
-                    <FontAwesomeIcon icon={faSpotify} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Spotify" />
+                    <FontAwesomeIcon icon={faSpotify} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Spotify" />
                   </a>
                   <a href="https://music.apple.com/us/artist/keefler/1567547480">
-                    <FontAwesomeIcon icon={faItunesNote} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Apple Music" />
+                    <FontAwesomeIcon icon={faItunesNote} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Apple Music" />
                   </a>
               </div>
             </div>
@@ -182,6 +178,7 @@ function JoinSection() {
 }
 
 export default function Home() {
+  const [email, setEmail] = useState("")
   return (
     <main className="min-h-screen bg-black text-white">
       <Header />
@@ -189,7 +186,7 @@ export default function Home() {
       <PrimeSection />
       <BadForMeSection />
       <LiveStreamingSection />
-      <JoinSection />
+      <JoinSection email={email} setEmail={setEmail} />
     </main>
   );
 }
