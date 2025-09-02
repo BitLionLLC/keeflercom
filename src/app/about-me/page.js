@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../components/header"
 import SocialLinks from "../components/socialLinks"
 
@@ -16,7 +17,7 @@ export default function AboutMe () {
                     <p>Of course, as Keefler, the plan was always to keep releasing music. Over the years there had been a lot of desire to make music of all kinds of genres. Keefler used his new persona as an opportunity to blend these sounds and show something unique. Keefler's music is a showcase of rapping, singing, and meaningful songwriting that is an evolution of everything he had done before.</p>
                     <p>Starting with a batch of pop-rap tracks, Keefler released his most well-received song "<a className="underline" href="https://open.spotify.com/track/03BjZ3jdvonAakFqCihBM6">Bad For Me</a>" in 2023 - a pop/rap/dance song that has become a cult classic within his community. With that, Keefler also released his first ever <a className="underline" href="https://www.youtube.com/watch?v=-DfHnyYowHA">music video</a>, brilliantly directed by his producer Dalton Wixom. Though the Bad For Me video is just the beginning for this group of creative friends.</p>
                     <p>Evolving his sound even more, Keefler feels as if this next group of songs he releases will be of his most true and genuine form yet. Once again blending his unique vocal talents, his next two singles "Prime" and "Lashes" are set to release before the end of the year.</p>
-                    <p><a className="underline italic" href="https://www.keefler.com/live-streaming">Join Keefler's Community</a></p>
+                    <p><Link className="underline italic" href="/live-streaming">Join Keefler's Community</Link></p>
                 </div>
             </div>
             <SocialLinks />
