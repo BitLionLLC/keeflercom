@@ -1,6 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+
+import Header from "./components/header";
+import SocialLinks from "./components/socialLinks";
+
 import banner from "../assets/home/banner.png";
 import prime from "../assets/home/prime.png";
 import musicvideo from "../assets/home/musicvideo.png";
@@ -9,28 +14,6 @@ import join from "../assets/home/join.png";
 import keefler from "../assets/home/keefler.png";
 import grid from "../assets/home/grid.png";
 import primeAlbum from "../assets/home/prime_album.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitch, faTiktok, faInstagram, faYoutube, faTwitter, faSpotify, faItunesNote } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
-
-function Header() {
-  return (
-    <header className="relative top-0 z-50 w-full h-[132px] bg-[#2a0a2e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#220725]/80">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
-        <div className="text-center w-full">
-          <div className="tracking-[0.2em] text-white font-bodoni-moda italic text-[45px]">KEEFLER</div>
-          <nav className="mt-2 hidden gap-[88px] text-md text-white/80 md:flex justify-center">
-            <a href="#home" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Home</a>
-            <a href="#about" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">About Me</a>
-            <a href="#music" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Music</a>
-            <a href="#live" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Live Streaming</a>
-            <a href="#join" className="hover:text-[#E3025A] active:text-[#E3025A] focus:text-[#E3025A] uppercase">Join</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 function HeroSection() {
   return (
@@ -146,29 +129,7 @@ function JoinSection({ email, setEmail }) {
                   <button type="button" className="mt-4 rounded bg-black px-6 py-2 text-sm font-semibold text-white">Submit</button>
                 </div>
               </form>
-              <div className="mt-[100px] ml-[20px] flex gap-8">
-                  <a href="https://www.twitch.tv/keefler_elf">
-                    <FontAwesomeIcon icon={faTwitch} className="text-black text-[62px] w-[62px] h-[62px]" aria-label="Twitch" />
-                  </a>
-                  <a href="https://www.tiktok.com/@keeflermusic">
-                    <FontAwesomeIcon icon={faTiktok} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="TikTok" />
-                  </a>
-                  <a href="https://www.instagram.com/keefler_elf/">
-                    <FontAwesomeIcon icon={faInstagram} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Instagram" />
-                  </a>
-                  <a href="https://youtube.com/@keeflermusic">
-                    <FontAwesomeIcon icon={faYoutube} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="YouTube" />
-                  </a>
-                  <a href="https://x.com/Keefler_Elf">
-                    <FontAwesomeIcon icon={faTwitter} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Twitter" />
-                  </a>
-                  <a href="https://open.spotify.com/artist/3t3zKVdiWERcdDHg6ei89c">
-                    <FontAwesomeIcon icon={faSpotify} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Spotify" />
-                  </a>
-                  <a href="https://music.apple.com/us/artist/keefler/1567547480">
-                    <FontAwesomeIcon icon={faItunesNote} className="text-[#da91d1] bg-black py-3 px-2 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Apple Music" />
-                  </a>
-              </div>
+              <SocialLinks />
             </div>
           </div>
         </div>
