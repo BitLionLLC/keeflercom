@@ -28,12 +28,12 @@ function Header() {
 function HeroSection() {
   return (
     <section id="home" className="relative h-[757px] w-full border-b-white border-b-[0.5px]">
-      <Image src={banner} alt="Keefler banner" fill priority className="w-full object-cover brightness-140" />
+      <Image src={banner} alt="Keefler banner" fill priority className="w-full h-full object-cover object-center brightness-140" />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-16">
         <div className="">
           <div className="mb-4 inline-block rounded-full border-white border-5 px-4 py-1 text-md tracking-widest text-white">PRE-SAVE</div>
-          <h1 className="text-center px-6 text-4xl font-light italic font-bodoni-moda tracking-wide text-white md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
+          <h1 className="text-center px-6 text-4xl font-light italic font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
             NEW MUSIC SOON
           </h1>
         </div>
@@ -46,7 +46,7 @@ function PrimeSection() {
   return (
     <section id="music" className="relative">
       <div className="relative h-[661px] w-full">
-        <Image src={prime} alt="Prime single" fill className="w-full object-cover brightness-140" />
+        <Image src={prime} alt="Prime single" fill className="w-full h-full object-cover object-center brightness-140" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="absolute inset-0 flex flex-col items-end justify-end pt-10 mb-14">
@@ -69,20 +69,20 @@ function BadForMeSection() {
   return (
     <section className="relative bg-[#2a0a2e]">
       <div className="relative h-[781px] w-full">
-        <Image src={keefler} alt="Bad For Me background" fill className="w-full object-cover brightness-140" />
-        <div className="absolute inset-0 bg-pink-700/40 mix-blend-multiply" />
+        <Image src={keefler} alt="Bad For Me background" className="w-full h-full m-auto object-cover brightness-110 aspect-16/5" />
+        <div className="absolute inset-0 mix-blend-multiply" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6">
-          <div className="max-w-xl">
-            <h2 className="text-3xl font-light italic text-white md:text-5xl">"BAD FOR ME"</h2>
+          <div className="">
+            <h2 className="text-3xl font-light italic font-bodoni-moda tracking-wide text-white text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">"BAD FOR ME"</h2>
             <div className="mt-6 flex gap-4">
               <a href="#" className="rounded-full bg-white/90 px-5 py-3 text-sm font-semibold text-[#2a0a2e] shadow hover:bg-white">STREAM NOW</a>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-white/70 shadow-xl">
-              <Image src={musicvideo} alt="Music video" fill className="w-full object-cover brightness-140" />
+              <Image src={musicvideo} alt="Music video" fill className="w-full object-cover object-center brightness-140" />
             </div>
             <div className="mt-4 text-center">
               <a href="#" className="rounded-full border border-white/80 px-4 py-2 text-xs tracking-widest text-white/90">MUSIC VIDEO</a>
@@ -98,7 +98,7 @@ function LiveStreamingSection() {
   return (
     <section id="live" className="relative">
       <div className="relative h-[758px] w-full">
-        <Image src={livestreaming} alt="Live streaming" fill className="w-full object-cover brightness-140" />
+        <Image src={livestreaming} alt="Live streaming" fill className="w-full h-full object-cover object-center brightness-140" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="absolute inset-0 flex items-end justify-center pb-10">
@@ -117,7 +117,7 @@ function JoinSection() {
   return (
     <section id="join" className="relative">
       <div className="relative h-[1002px] w-full">
-        <Image src={join} alt="Join the community" fill className="w-full object-cover object-[50%_20%]" />
+        <Image src={join} alt="Join the community" fill className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0" />
       </div>
       <div className="absolute inset-0 flex items-center">
