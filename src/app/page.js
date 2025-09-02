@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import banner from "../assets/home/banner.png";
 import prime from "../assets/home/prime.png";
@@ -9,6 +11,7 @@ import grid from "../assets/home/grid.png";
 import primeAlbum from "../assets/home/prime_album.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitch, faTiktok, faInstagram, faYoutube, faTwitter, faSpotify, faItunesNote } from "@fortawesome/free-brands-svg-icons";
+import { Checkbox, Input } from "@heroui/react";
 
 function Header() {
   return (
@@ -125,42 +128,49 @@ function JoinSection() {
       <div className="absolute inset-0 flex items-start pt-2">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
           <div className="max-w-xl">
-            <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide text-white text-[80px] leading-[01]">JOIN THE COMMUNITY</h2>
+            <h2 className="font-light italic text-white text-[80px] font-bodoni-moda tracking-wide leading-[01]">JOIN THE COMMUNITY</h2>
             <div className="mt-6">
               <a href="#" className="text-center rounded-full text-white px-14 border-4 py-2 text-md bg-[#220725] shadow hover:bg-white tracking-[0.2em] font-bold z-10">LEARN MORE</a>
             </div>
             <div className="mt-10">
-              <h3 className="font-light italic text-white font-bodoni-moda tracking-wide text-white text-[45px]">SIGN UP FOR THE NEWSLETTER</h3>
+              <h3 className="font-light italic text-white font-bodoni-moda tracking-wide text-[45px]">SIGN UP FOR THE NEWSLETTER</h3>
               <form className="mt-4 max-w-md">
                 <label htmlFor="email" className="sr-only">Email</label>
-                <input id="email" type="email" placeholder="Enter your email here *" className="w-full rounded-none border-b border-white px-4 py-3 text-sm text-black placeholder-black/60 outline-none" />
-                <div className="mt-3 flex items-center gap-3 text-white/90">
-                  <input id="subscribe" type="checkbox" className="h-4 w-4" />
-                  <label htmlFor="subscribe" className="text-sm">Yes, subscribe me to your newsletter.</label>
+                <p className="text-white/60">Enter your email here *</p>
+                <Input id="email" type="email" className="border-b-1 border-b-white" variant="flat" classNames={{
+                  inputWrapper: "after:border-white focus-within:after:border-white",
+                  input: "text-white placeholder:text-white/60",
+                  label: "text-white/80",
+                }} />
+                <div className="flex justify-between">
+                  <div className="mt-3 flex items-center gap-3">
+                    <Checkbox isRequired className="w-[20px]" />
+                    <label htmlFor="subscribe" className="text-md">Yes, subscribe me to your<br/> newsletter. *</label>
+                  </div>
+                  <button type="button" className="mt-4 rounded bg-black px-6 py-2 text-sm font-semibold text-white">Submit</button>
                 </div>
-                <button type="button" className="mt-4 rounded bg-black px-6 py-2 text-sm font-semibold text-white">Submit</button>
               </form>
               <div className="mt-[100px] ml-[20px] flex gap-8">
                   <a href="https://www.twitch.tv/keefler_elf">
-                    <FontAwesomeIcon icon={faTwitch} className="text-black text-md w-[62px] h-[62px]" aria-label="Twitch" />
+                    <FontAwesomeIcon icon={faTwitch} className="text-black text-[62px] w-[62px] h-[62px]" aria-label="Twitch" />
                   </a>
                   <a href="https://www.tiktok.com/@keeflermusic">
-                    <FontAwesomeIcon icon={faTiktok} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full text-md w-[62px] h-[62px]" aria-label="TikTok" />
+                    <FontAwesomeIcon icon={faTiktok} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="TikTok" />
                   </a>
                   <a href="https://www.instagram.com/keefler_elf/">
-                    <FontAwesomeIcon icon={faInstagram} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full text-md w-[62px] h-[62px]" aria-label="Instagram" />
+                    <FontAwesomeIcon icon={faInstagram} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Instagram" />
                   </a>
                   <a href="https://youtube.com/@keeflermusic">
-                    <FontAwesomeIcon icon={faYoutube} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full text-md w-[62px] h-[62px]" aria-label="YouTube" />
+                    <FontAwesomeIcon icon={faYoutube} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="YouTube" />
                   </a>
                   <a href="https://x.com/Keefler_Elf">
-                    <FontAwesomeIcon icon={faTwitter} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full text-md w-[62px] h-[62px]" aria-label="Twitter" />
+                    <FontAwesomeIcon icon={faTwitter} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Twitter" />
                   </a>
                   <a href="https://open.spotify.com/artist/3t3zKVdiWERcdDHg6ei89c">
-                    <FontAwesomeIcon icon={faSpotify} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full text-md w-[62px] h-[62px]" aria-label="Spotify" />
+                    <FontAwesomeIcon icon={faSpotify} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Spotify" />
                   </a>
                   <a href="https://music.apple.com/us/artist/keefler/1567547480">
-                    <FontAwesomeIcon icon={faItunesNote} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full text-md w-[62px] h-[62px]" aria-label="Apple Music" />
+                    <FontAwesomeIcon icon={faItunesNote} className="text-[#da91d1] bg-black p-3 text-[40px] rounded-full w-[62px] h-[62px]" aria-label="Apple Music" />
                   </a>
               </div>
             </div>
