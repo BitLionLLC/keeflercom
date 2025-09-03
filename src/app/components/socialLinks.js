@@ -3,7 +3,7 @@ import { faTwitch, faTiktok, faInstagram, faYoutube, faTwitter, faSpotify, faItu
 
 export default function SocialLinks ({ outerClassName="", twitchIconClassName="text-[62px] w-[62px] h-[62px]", iconClassName="text-[40px] text-[#da91d1] w-[62px] h-[62px]" }) {
     return (
-        <div className={`${"mt-[100px] ml-[20px] flex gap-8"} ${outerClassName}`}>
+        <div className={`${"mt-[100px] flex-wrap justify-center md:flex-nowrap flex gap-5"} ${outerClassName}`}>
             <a href="https://www.twitch.tv/keefler_elf">
             <FontAwesomeIcon icon={faTwitch} className={`text-black ${twitchIconClassName}`} aria-label="Twitch" />
             </a>

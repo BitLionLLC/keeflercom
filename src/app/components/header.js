@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`relative top-0 z-50 w-full ${mobileOpen ? "h-auto" : "h-[132px]"} md:h-[132px] bg-[#2a0a2e] backdrop-blur`}>
+    <header className={`relative top-0 z-50 w-full ${mobileOpen ? "h-auto" : "h-[80px]"} md:h-[132px] bg-[#2a0a2e] backdrop-blur`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
         {/* Mobile menu button */}
         <button

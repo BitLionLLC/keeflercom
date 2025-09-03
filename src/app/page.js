@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 import Header from "./components/header";
@@ -14,6 +15,7 @@ import join from "../assets/home/join.png";
 import keefler from "../assets/home/keefler.png";
 import grid from "../assets/home/grid.png";
 import primeAlbum from "../assets/home/prime_album.png";
+import NewsletterSignUp from "./components/newsletterSignUp";
 
 function HeroSection() {
   return (
@@ -22,7 +24,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-12 md:pb-16">
         <div className="">
-          <div className="w-[150px] md:w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">PRE-SAVE</div>
+          <a href="https://distrokid.com/hyperfollow/keefler/lashes"><div className="w-[150px] md:w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">PRE-SAVE</div></a>
           <h1 className="text-center px-6 font-light italic font-bodoni-moda tracking-wide text-white text-4xl md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
             NEW MUSIC SOON
           </h1>
@@ -41,10 +43,11 @@ function PrimeSection() {
       </div>
       <div className="absolute inset-0 flex flex-col items-center md:items-end justify-end pt-10 mb-14 px-4">
         <div className="flex flex-col w-full items-center">
-          <div className="flex flex-col items-center gap-3 w-full md:flex-row md:justify-between md:w-4/7">
+          <div className="flex flex-col items-end gap-3 w-3/4 md:flex-row md:justify-between">
             <p className="mb-2 text-white/80 italic tracking-widest font-bodoni-moda text-xl md:text-3xl md:-ml-[50px]">Out Everywhere</p>
-            <div className="">
-              <a href="#" className="rounded-full text-white px-6 py-2 text-sm md:px-8 md:py-3 md:text-md bg-[#220725] shadow  tracking-[0.2em] font-bold">STREAM NOW</a>
+            <div className="flex flex-col items-center">
+              <Image src={primeAlbum} className="w-[200px] md:w-[320px]" alt="Prime single album cover" />
+              <a href="https://distrokid.com/hyperfollow/keefler/prime" className="rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold mt-6 mb-10">STREAM NOW</a>
             </div>
           </div>
           <h2 className="text-4xl md:text-[80px] font-light italic text-white font-bodoni-moda text-center md:text-left">NEW SINGLE "PRIME"</h2>
@@ -67,13 +70,13 @@ function BadForMeSection() {
           <div className="flex flex-col items-end">
             <h2 className="font-light italic font-bodoni-moda tracking-wide text-white text-4xl md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">"BAD FOR ME"</h2>
             <div className="mt-2 flex gap-4">
-              <a href="#" className="rounded-full text-white px-6 py-2 text-sm md:px-8 md:py-3 md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">STREAM NOW</a>
+              <a href="https://open.spotify.com/track/03BjZ3jdvonAakFqCihBM6?si=4cf8a83dfc16402f" className="rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">STREAM NOW</a>
             </div>
           </div>
           <div className="hidden md:block absolute left-0 top-[40px]">
             <div className="relative h-[400px] w-[400px] overflow-hidden rounded-full border-6 border-white shadow-xl">
               <Image src={musicvideo} alt="Music video" fill className="w-full object-cover object-center brightness-140" />
-              <a href="#" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
+              <a href="https://www.youtube.com/watch?v=-DfHnyYowHA" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
             </div>
           </div>
         </div>
@@ -91,9 +94,9 @@ function LiveStreamingSection() {
       </div>
       <div className="absolute inset-0 flex items-start justify-end pb-10">
         <div className="text-center">
-          <h2 className="font-light italic text-white text-5xl md:text-[80px] font-bodoni-moda tracking-wide [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">LIVE STREAMING</h2>
-          <div className="-mt-2 flex justify-end">
-            <a href="#" className="text-center rounded-full text-white px-3 md:px-1 border-4 py-1 text-sm md:text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">COME CHILL</a>
+          <h2 className="font-light italic text-white text-5xl md:text-[80px] font-bodoni-moda tracking-wide mt-2">LIVE STREAMING</h2>
+          <div className="mt-2 flex justify-end">
+            <Link href="/join-1" className="text-center rounded-full text-white md:px-4 border-4 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold z-10">COME CHILL</Link>
           </div>
         </div>
       </div>
@@ -113,22 +116,11 @@ function JoinSection({ email, setEmail }) {
           <div className="max-w-xl">
             <h2 className="font-light italic text-white text-5xl md:text-[80px] font-bodoni-moda tracking-wide leading-[01]">JOIN THE COMMUNITY</h2>
             <div className="mt-6">
-              <a href="#" className="text-center rounded-full text-white px-10 md:px-14 border-4 py-2 text-sm md:text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">LEARN MORE</a>
+              <a href="https://www.keefler.com/" className="text-center rounded-full text-white px-10 md:px-14 border-4 py-2 text-sm md:text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">LEARN MORE</a>
             </div>
             <div className="mt-10">
               <h3 className="font-light italic text-white font-bodoni-moda tracking-wide text-2xl md:text-[45px]">SIGN UP FOR THE NEWSLETTER</h3>
-              <form className="mt-4 max-w-md">
-                <label htmlFor="email" className="sr-only">Email</label>
-                <p className="text-white/60">Enter your email here *</p>
-                <input className="w-full focus:bg-white/30 h-[40px] focus:border-0 focus:ring-0 outline-0 p-2" value={email} onChange={e => setEmail(e.target.value)} />
-                <div className="flex flex-col md:flex-row md:justify-between">
-                  <div className="mt-3 flex items-center gap-3">
-                    <input type="checkbox" className="!bg-transparent" required />
-                    <label htmlFor="subscribe" className="text-md">Yes, subscribe me to your<br/> newsletter. *</label>
-                  </div>
-                  <button type="button" className="mt-4 rounded bg-black px-6 py-2 text-sm font-semibold text-white">Submit</button>
-                </div>
-              </form>
+              <NewsletterSignUp email={email} setEmail={setEmail} />
               <SocialLinks />
             </div>
           </div>
