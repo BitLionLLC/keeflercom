@@ -106,7 +106,7 @@ function LiveStreamingSection() {
 
 function JoinSection({ email, setEmail }) {
   return (
-    <section id="join" className="relative">
+    <section id="join" className="relative overflow-hidden">
       <div className="relative h-[860px] md:h-[1002px] w-full">
         <Image src={join} alt="Join the community" fill className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0" />
@@ -125,6 +125,7 @@ function JoinSection({ email, setEmail }) {
             </div>
           </div>
         </div>
+        <Image src={grid} alt="beat pad" className="absolute -right-[500px] bottom-0"/>
       </div>
     </section>
   );
