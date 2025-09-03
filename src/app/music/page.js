@@ -17,21 +17,45 @@ export default function Music () {
         <div className="relative">
             <Header />
             <div className="bg-[url(@/assets/music/bg.png)] absolute inset-0 -z-10 bg-no-repeat bg-cover bg-center opacity-50 min-h-screen h-full w-full"/>
-            <div className="relative z-10 bg-black/20 pt-[60px] min-h-screen h-full flex justify-center">
-                <div className="flex flex-col w-[300px]">
-                    <Image src={badForMe} width={290} />
-                    <Image src={relax} width={290} />
-                    <Image src={present} width={290} />
-                    <Image src={cover} width={290} />
-                    <Image src={myDay} width={290} />
-                    <Image src={captain} width={290} /> 
+            <div className="relative z-10 bg-black/20 pt-[60px] min-h-screen h-full flex flex-col md:flex-row items-center md:items-start justify-center">
+                <div className="flex flex-col w-full md:w-[30%] max-w-[300px] space-y-4 px-4 md:px-0">
+                    <Image src={badForMe} width={290} style={{ width: '100%', height: 'auto' }} />
+                    <Image src={relax} width={290} style={{ width: '100%', height: 'auto' }} />
+                    <Image src={present} width={290} style={{ width: '100%', height: 'auto' }} />
+                    <Image src={cover} width={290} style={{ width: '100%', height: 'auto' }} />
+                    <Image src={myDay} width={290} style={{ width: '100%', height: 'auto' }} />
+                    <Image src={captain} width={290} style={{ width: '100%', height: 'auto' }} /> 
                 </div>
-                <div className="ml-[40px] w-[700px]">
-                    <h1 className="italic font-bodoni-moda tracking-wide text-white text-[150px]">MUSIC</h1>
+                <div className="w-full md:w-[70%] max-w-[700px] mt-6 md:mt-0 md:ml-[40px] px-4 md:px-0">
+                    <h1 className="italic font-bodoni-moda tracking-wide text-white text-5xl md:text-[150px] text-center md:text-left">MUSIC</h1>
                     <div className="flex flex-col items-center">
-                        <iframe data-testid="embed-iframe" className="rounded-md h-[500px] w-[679px]" src="https://open.spotify.com/embed/playlist/3WAb6ZfS3n6ZXQPTMBYQs9?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        <iframe className="mt-6" width="560" height="315" src="https://www.youtube.com/embed/-DfHnyYowHA?si=MajaFkDb1Hnupnnf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <div className="bg-white w-[634px] h-[201px] mt-6">
+                        <div className="w-full max-w-[679px] rounded-md overflow-hidden mt-4">
+                            <div className="relative w-full pt-[56.25%]">
+                                <iframe
+                                    data-testid="embed-iframe"
+                                    className="absolute inset-0 h-full w-full rounded-md"
+                                    src="https://open.spotify.com/embed/playlist/3WAb6ZfS3n6ZXQPTMBYQs9?utm_source=generator&theme=0"
+                                    frameBorder={0}
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div className="w-full max-w-[560px] rounded-md overflow-hidden mt-6">
+                            <div className="relative w-full pt-[56.25%]">
+                                <iframe
+                                    className="absolute inset-0 h-full w-full"
+                                    src="https://www.youtube.com/embed/-DfHnyYowHA?si=MajaFkDb1Hnupnnf"
+                                    title="YouTube video player"
+                                    frameBorder={0}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div className="bg-white w-full max-w-[634px] mt-6 p-4">
                             <div className="flex h-[112px] items-center justify-center border-b-1 border-black">
                                 <Image src={appleMusic} className="h-[80%]" />
                                 <Image src={amazonMusic} className="h-[80%]" />
