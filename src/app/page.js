@@ -24,7 +24,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-12 md:pb-16">
         <div className="">
-          <a href="https://distrokid.com/hyperfollow/keefler/lashes"><div className="w-[150px] md:w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">PRE-SAVE</div></a>
+          <a href="https://distrokid.com/hyperfollow/keefler/lashes"><div className="w-[175px] md:w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold mb-2">PRE-SAVE</div></a>
           <h1 className="text-center px-6 font-light italic font-bodoni-moda tracking-wide text-white text-4xl md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
             NEW MUSIC SOON
           </h1>
@@ -94,9 +94,9 @@ function LiveStreamingSection() {
       </div>
       <div className="absolute inset-0 flex items-start justify-end pb-10">
         <div className="text-center">
-          <h2 className="font-light italic text-white text-5xl md:text-[80px] font-bodoni-moda tracking-wide mt-2">LIVE STREAMING</h2>
+          <h2 className="font-light italic text-white text-5xl md:text-[80px] font-bodoni-moda tracking-wide mt-3">LIVE STREAMING</h2>
           <div className="mt-2 flex justify-end">
-            <Link href="/join-1" className="text-center rounded-full text-white md:px-4 border-4 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold z-10">COME CHILL</Link>
+            <Link href="/join-1" className="text-center rounded-full text-white px-4 border-4 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold z-10 mt-2">COME CHILL</Link>
           </div>
         </div>
       </div>
