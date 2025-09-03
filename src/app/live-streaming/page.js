@@ -27,7 +27,7 @@ export default function LiveStreaming() {
             </div>
             <div className="flex flex-col md:flex-row md:h-[658px]">
                 <div className="w-full md:w-1/2 bg-black flex items-center justify-center">
-                    <Image src={desk} className="w-auto h-auto max-h-full" alt="Desk setup"/>
+                    <Image src={desk} className="w-full h-auto max-h-[658px] object-contain" alt="Desk setup"/>
                 </div>
                 <div className="w-full md:w-1/2 bg-black flex flex-col items-center gap-6 justify-center py-8">
                     <h2 className="font-bodoni-moda italic text-[32px] md:text-[50px] text-white text-center">Join the Discord</h2>

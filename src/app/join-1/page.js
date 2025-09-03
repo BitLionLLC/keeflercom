@@ -25,7 +25,7 @@ export default function Join() {
                             <Image src={discord} width={333} className="w-full max-w-[333px] h-auto" alt="Discord logo" />
                             <Image src={discordBlack} className="absolute top-[20px] left-[24px]" width={288} alt="Discord wordmark" />
                         </div>
-                        <a href="https://discord.gg/MsEwjY2"><div className="mt-[30px] bg-black border-pink-700 border-1 text-3xl text-pink-700 font-semibold py-6 w-[250px] text-center">JOIN HERE &gt;</div></a>
+                        <a href="https://discord.gg/MsEwjY2"><div className="mt-[30px] bg-black border-pink-700 border-1 text-3xl text-pink-700 font-semibold py-6 w-[250px] text-center mb-10">JOIN HERE &gt;</div></a>
                     </div>
                 </div>
             </div>
