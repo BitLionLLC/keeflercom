@@ -17,7 +17,7 @@ export default function LiveStreaming() {
                 <div className="w-full md:w-1/2 bg-black flex flex-col items-center gap-6 justify-center py-8">
                     <h2 className="font-bodoni-moda italic text-[32px] md:text-[50px] text-white text-center">Follow on Twitch</h2>
                     <Image src={twitch} className="w-[220px] md:w-auto h-auto" alt="Twitch logo"/>
-                    <a href="https://www.twitch.tv/keefler_elf"><div className="bg-[#fe0860] text-black w-[150px] text-2xl p-2 font-bold text-center">FOLLOW</div></a>
+                    <a href="https://www.twitch.tv/keefler_elf" target="_blank" rel="noreferrer"><div className="bg-[#fe0860] text-black w-[150px] text-2xl p-2 font-bold text-center">FOLLOW</div></a>
                 </div>
                 <div className="w-full md:w-1/2 bg-[#fe0860] flex flex-col items-center justify-center p-4">
                     <div className="w-full aspect-video">
@@ -32,7 +32,7 @@ export default function LiveStreaming() {
                 <div className="w-full md:w-1/2 bg-black flex flex-col items-center gap-6 justify-center py-8">
                     <h2 className="font-bodoni-moda italic text-[32px] md:text-[50px] text-white text-center">Join the Discord</h2>
                     <Image src={discord} className="w-[220px] md:w-auto h-auto" alt="Discord logo"/>
-                    <a href="https://discord.gg/MsEwjY2"><div className="bg-[#fe0860] text-black w-[150px] text-2xl p-2 font-bold text-center">JOIN NOW</div></a>
+                    <a href="https://discord.gg/MsEwjY2" target="_blank" rel="noreferrer"><div className="bg-[#fe0860] text-black w-[150px] text-2xl p-2 font-bold text-center">JOIN NOW</div></a>
                 </div>
             </div>
         </div>

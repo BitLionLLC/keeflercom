@@ -24,7 +24,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 flex h-full w-full items-end justify-center pb-12 md:pb-16">
         <div className="">
-          <a href="https://distrokid.com/hyperfollow/keefler/lashes"><div className="w-[175px] md:w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold mb-2">PRE-SAVE</div></a>
+          <a href="https://distrokid.com/hyperfollow/keefler1/you" target="_blank" rel="noreferrer"><div className="w-[175px] md:w-[175px] rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold mb-2">PRE-SAVE</div></a>
           <h1 className="text-center px-6 font-light italic font-bodoni-moda tracking-wide text-white text-4xl md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">
             NEW MUSIC SOON
           </h1>
@@ -47,7 +47,7 @@ function PrimeSection() {
             <p className="mb-2 text-white/80 italic tracking-widest font-bodoni-moda text-xl md:text-3xl md:-ml-[50px]">Out Everywhere</p>
             <div className="flex flex-col items-center">
               <Image src={primeAlbum} className="w-[200px] md:w-[320px]" alt="Prime single album cover" />
-              <a href="https://distrokid.com/hyperfollow/keefler/prime" className="rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold mt-6 mb-10">STREAM NOW</a>
+              <a href="https://distrokid.com/hyperfollow/keefler/prime" target="_blank" rel="noreferrer" className="rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold mt-6 mb-10">STREAM NOW</a>
             </div>
           </div>
           <h2 className="text-4xl md:text-[80px] font-light italic text-white font-bodoni-moda text-center md:text-left">NEW SINGLE "PRIME"</h2>
@@ -70,13 +70,13 @@ function BadForMeSection() {
           <div className="flex flex-col items-end">
             <h2 className="font-light italic font-bodoni-moda tracking-wide text-white text-4xl md:text-[80px] [text-shadow:3px_3px_2px_rgba(0,0,0,0.5)]">"BAD FOR ME"</h2>
             <div className="mt-2 flex gap-4">
-              <a href="https://open.spotify.com/track/03BjZ3jdvonAakFqCihBM6?si=4cf8a83dfc16402f" className="rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">STREAM NOW</a>
+              <a href="https://open.spotify.com/track/03BjZ3jdvonAakFqCihBM6?si=4cf8a83dfc16402f" target="_blank" rel="noreferrer" className="rounded-full text-white text-center px-6 border-5 py-2 text-sm md:text-md bg-[#220725] shadow tracking-[0.2em] font-bold">STREAM NOW</a>
             </div>
           </div>
           <div className="hidden md:block absolute left-0 top-[40px]">
             <div className="relative h-[400px] w-[400px] overflow-hidden rounded-full border-6 border-white shadow-xl">
               <Image src={musicvideo} alt="Music video" fill className="w-full object-cover object-center brightness-140" />
-              <a href="https://www.youtube.com/watch?v=-DfHnyYowHA" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
+              <a href="https://www.youtube.com/watch?v=-DfHnyYowHA" target="_blank" rel="noreferrer" className="w-[255px] text-center rounded-full text-white px-8 border-4 py-3 text-md bg-[#220725] shadow tracking-[0.2em] font-bold z-10 absolute bottom-[35px] left-[70px]">MUSIC VIDEO</a>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ function JoinSection({ email, setEmail }) {
           <div className="max-w-xl">
             <h2 className="font-light italic text-white text-5xl md:text-[80px] font-bodoni-moda tracking-wide leading-[01]">JOIN THE COMMUNITY</h2>
             <div className="mt-6">
-              <a href="https://www.keefler.com/" className="text-center rounded-full text-white px-10 md:px-14 border-4 py-2 text-sm md:text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">LEARN MORE</a>
+              <a href="https://www.keefler.com/" target="_blank" rel="noreferrer" className="text-center rounded-full text-white px-10 md:px-14 border-4 py-2 text-sm md:text-md bg-[#220725] shadow  tracking-[0.2em] font-bold z-10">LEARN MORE</a>
             </div>
             <div className="mt-10">
               <h3 className="font-light italic text-white font-bodoni-moda tracking-wide text-2xl md:text-[45px]">SIGN UP FOR THE NEWSLETTER</h3>
